@@ -38,13 +38,13 @@ jobs:
           path: ${{env.pathToCi}}
           clean: false # otherwise the local repo will no longer be checked out
           
-      - name: Restore Cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            ${{env.pathToCi}}/.nuke/temp
-            ~/.nuget/packages
-          key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj') }}
+      # - name: Restore Cache
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: |
+      #       ${{env.pathToCi}}/.nuke/temp
+      #       ~/.nuget/packages
+      #     key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj') }}
           
       - name: Build Package Version Listing
         run: ${{env.pathToCi}}/build.cmd BuildMultiPackageListing --root ${{env.pathToCi}} --list-publish-directory $GITHUB_WORKSPACE/${{env.listPublishDirectory}}
