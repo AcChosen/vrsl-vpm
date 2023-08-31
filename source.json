@@ -13,8 +13,7 @@
     },
     "bannerUrl":"banner.png",
     "githubRepos":[
-        "AcChosen/VR-Stage-Lighting",
-        "AcChosen/VR-Stage-Lighting-GI-DMX"
+        "AcChosen/VR-Stage-Lighting"
     ],
     "packages":[
         {
