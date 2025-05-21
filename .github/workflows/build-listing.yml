@@ -35,7 +35,7 @@ jobs:
       - uses: actions/checkout@v4 # check out automation repo
         with:
           repository: AcChosen/package-list-action-vrsl-vpm
-          token: ${{ secrets.VRSL_ALL_ACCESS }}
+          token: ${{ secrets.VRSL_VPM_TOKEN }}
           path: ${{env.pathToCi}}
           clean: false # otherwise the local repo will no longer be checked out
           
